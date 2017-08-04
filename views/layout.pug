@@ -1,0 +1,71 @@
+doctype html
+html
+    head
+        title= title
+        // bootstrap and ajax
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+
+        // local styling
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        // fonts
+        link(href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet")
+    body
+        .container.mainContentWrapper
+            include templates/layout/carousel
+            include templates/layout/navBar
+            div
+                block content
+    footer
+        //button.btn.btn-default(type='button' onclick='javacript:window.location.reload();' value='reload' name='reload') reload
+        p Center for Integrated Medicine®. 2017. All rights reserved.
+        a(href='https://www.facebook.com/cim.fans/' target='_blank')
+            img(src='images/fb-sm-icon.png', alt='CIM Facebook Page')
+
+
+script.
+    function getContent(content, path, location) {
+        $.ajax({
+            type: 'get',
+            url: 'http://localhost:4000/REST/getHTML',
+            dataType: 'json',
+            data: {
+                'file': content,
+                'path': path
+            },
+            success: function (data, status) {
+                $('#' + location + 'Content').html(data['html']);
+            },
+            complete: function (data, status) {
+                //alert(status);
+            }
+        });
+    }
+
+    function getContentFromDropdown(value) {
+        var valueList = value.split(',');
+
+        // three args: getContent(content, path, location);
+        getContent(valueList[0], valueList[1], valueList[2]);
+    }
+
+    function removeActive(id) {
+        $(id).find('ul li.active').removeClass('active');
+    }
+
+    function selectNav(id, idPrefixList, dropdownId) {
+        var idNum = id.substring(1);
+        for (var i = 0; i < idPrefixList.length; i++) {
+            $(idPrefixList[i] + idNum).addClass('active');
+        }
+        $(dropdownId + idNum).prop('selected', true);
+    }
+
+    $('.navLink').on('click', function () {
+        if ($(window).width() < 768) {
+            $('.btn-navbar').click(); //bootstrap 2.x
+            $('.navbar-toggle').click(); //bootstrap 3.x
+        }
+    });

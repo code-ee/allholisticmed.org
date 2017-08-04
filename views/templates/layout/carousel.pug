@@ -1,0 +1,36 @@
+#myCarousel.carousel.slide(data-ride='carousel')
+    // Indicators
+    ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+        li(data-target='#myCarousel', data-slide-to='3')
+        li(data-target='#myCarousel', data-slide-to='4')
+        li(data-target='#myCarousel', data-slide-to='5')
+    // Wrapper for slides
+    .carousel-inner
+        .item.active
+            div.carousel-photo
+            img(src='/images/carousel/logo_cim.jpg')
+        .item
+            div.carousel-photo
+            img(src='/images/carousel/acupuncture.jpg')
+        .item
+            div.carousel-photo
+            img(src='/images/carousel/bamboo_water.jpg')
+        .item
+            div.carousel-photo
+            img(src='/images/carousel/bonsai_tree.jpg')
+        .item
+            div.carousel-photo
+            img(src='/images/carousel/chinese_fog.jpg')
+        .item
+            div.carousel-photo
+            img(src='/images/carousel/chinese_landscape.jpg')
+    // Left and right controls
+    a.left.carousel-control(href='#myCarousel', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+        span.sr-only Previous
+    a.right.carousel-control(href='#myCarousel', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+        span.sr-only Next

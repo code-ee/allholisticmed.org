@@ -1,0 +1,73 @@
+nav.navbar.navbar-inverse
+    .container-fluid
+        .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href='javascript:getContent("home", "home/", "index");') Home
+        #myNavbar.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                li.dropdown
+                    a#aboutUs.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                        | About Us
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a.navLink(href='javascript:getContent("drKwong", "aboutUs/", "index");') Dr. Kwong
+                        li
+                            a.navLink(href='javascript:getContent("staffInterns", "aboutUs/", "index");') Staff & Interns
+                li.dropdown
+                    a#services.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                        | Services
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a.navLink(href='javascript:getContent("medicalModalities", "services/", "index");') Medical Modalities
+                        li
+                            a.navLink(href='javascript:getContent("fees", "services/", "index");') Fees
+                        li
+                            a.navLink(href='javascript:getContent("jadeGardenPharmacy", "services/", "index");') Jade Garden Pharmacy
+                        li
+                            a.navLink(href='javascript:getContent("classes", "services/", "index");') Classes
+                li.dropdown
+                    a#eduOps.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                        | Education/Opportunities
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a.navLink(href='javascript:getContent("miniMedSchool", "edOps/", "index");') Mini Medical School
+                        li
+                            a.navLink(href='javascript:getContent("studentPrograms", "edOps/", "index");') Student Programs
+                        li
+                            a.navLink(href='javascript:getContent("medHerbGarden", "edOps/", "index");') Chinese Medicinal Herb Garden
+                li.dropdown
+                    a#patientInfo.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                        | Patient Info
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a.navLink(href='javascript:getContent("partnership", "patientInfo/", "index");') Partnership to Better Health
+                        li
+                            a.navLink(href='javascript:getContent("insurance", "patientInfo/", "index");') Insurance Information
+                        li
+                            a.navLink(href='javascript:getContent("faq", "patientInfo/", "index");') Frequently Asked Questions
+                li.dropdown
+                    a#acs.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                        | Asian Cultural Society
+                        span.caret
+                    ul.dropdown-menu
+                        li
+                            a.navLink(href='javascript:getContent("teaCulture", "acs/", "index");') Tea Culture
+                        li
+                            a.navLink(href='javascript:getContent("chineseNewYear", "acs/", "index");') Chinese New Year
+                        li
+                            a.navLink(href='javascript:getContent("moonFestival", "acs/", "index");') Mid Autumn Moon Festival
+
+            //ul.nav.navbar-nav.navbar-right
+            //    form.navbar-form.searchBar
+            //        .input-group
+            //            input.form-control(type='text', placeholder='Search')
+            //            .input-group-btn
+            //                button.btn.btn-default(type='submit')
+            //                    i.glyphicon.glyphicon-search

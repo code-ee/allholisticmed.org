@@ -1,0 +1,78 @@
+nav.modalityNav#modalityNav
+    .hidden-xs.hidden-sm
+        ul.nav.nav-pills.nav-stacked
+            li#a1.active
+                a(href='javascript:getContent("acupressure", "services/modalities/", "modality");') Acupressure
+            li#a2
+                a(href='javascript:getContent("acupuncture", "services/modalities/", "modality");') Acupuncture
+            li#a3
+                a(href='javascript:getContent("cupping", "services/modalities/", "modality");') Cupping
+            li#a4
+                a(href='javascript:getContent("fengshui", "services/modalities/", "modality");') Feng Shui
+            li#a5
+                a(href='javascript:getContent("guaSha", "services/modalities/", "modality");') Gua Sha
+            li#a6
+                a(href='javascript:getContent("foodTherapy", "services/modalities/", "modality");') Food Therapy
+            li#a7
+                a(href='javascript:getContent("herbalMedicine", "services/modalities/", "modality");') Herbal Medicine
+            li#a8
+                a(href='javascript:getContent("highGradeTeas", "services/modalities/", "modality");') High Grade Teas
+            li#a9
+                a(href='javascript:getContent("mindfulness", "services/modalities/", "modality");') Mindfulness
+            li#a10
+                a(href='javascript:getContent("moxibustion", "services/modalities/", "modality");') Moxibustion
+            li#a11
+                a(href='javascript:getContent("musicTherapy", "services/modalities/", "modality");') Music Therapy
+            li#a12
+                a(href='javascript:getContent("tuiNaMassage", "services/modalities/", "modality");') Tui Na Massage
+    .visible-sm
+        ul.nav.nav-pills
+            li#b1.active
+                a(href='javascript:getContent("acupressure", "services/modalities/", "modality");') Acupressure
+            li#b2
+                a(href='javascript:getContent("acupuncture", "services/modalities/", "modality");') Acupuncture
+            li#b3
+                a(href='javascript:getContent("cupping", "services/modalities/", "modality");') Cupping
+            li#b4
+                a(href='javascript:getContent("fengshui", "services/modalities/", "modality");') Feng Shui
+            li#b5
+                a(href='javascript:getContent("guaSha", "services/modalities/", "modality");') Gua Sha
+            li#b6
+                a(href='javascript:getContent("foodTherapy", "services/modalities/", "modality");') Food Therapy
+            li#b7
+                a(href='javascript:getContent("herbalMedicine", "services/modalities/", "modality");') Herbal Medicine
+            li#b8
+                a(href='javascript:getContent("highGradeTeas", "services/modalities/", "modality");') High Grade Teas
+            li#b9
+                a(href='javascript:getContent("mindfulness", "services/modalities/", "modality");') Mindfulness
+            li#b10
+                a(href='javascript:getContent("moxibustion", "services/modalities/", "modality");') Moxibustion
+            li#b11
+                a(href='javascript:getContent("musicTherapy", "services/modalities/", "modality");') Music Therapy
+            li#b12
+                a(href='javascript:getContent("tuiNaMassage", "services/modalities/", "modality");') Tui Na Massage
+    .form-group.visible-xs
+        select#modalitySelect.form-control(onchange='javascript:getContentFromDropdown(this.value);')
+            option#c1(value='acupressure,services/modalities/,modality') Acupressure
+            option#c2(value='acupuncture,services/modalities/,modality') Acupuncture
+            option#c3(value='cupping,services/modalities/,modality') Cupping
+            option#c4(value='fengshui,services/modalities/,modality') Feng Shui
+            option#c5(value='guaSha,services/modalities/,modality') Gua Sha
+            option#c6(value='foodTherapy,services/modalities/,modality') Food Therapy
+            option#c7(value='herbalMedicine,services/modalities/,modality') Herbal Medicine
+            option#c8(value='highGradeTeas,services/modalities/,modality') High Grade Teas
+            option#c9(value='mindfulness,services/modalities/,modality') Mindfulness
+            option#c10(value='moxibustion,services/modalities/,modality') Moxibustion
+            option#c11(value='musicTherapy,services/modalities/,modality') Music Therapy
+            option#c12(value='tuiNaMassage,services/modalities/,modality') Tui Na Massage
+
+script.
+    $('.modalityNav li a').click(function() {
+        removeActive('#modalityNav');
+        selectNav($(this).parent().attr('id'), ['#a', '#b'], '#c');
+    });
+
+    $('#modalitySelect').change(function() {
+        removeActive('#modalityNav');
+        selectNav($(this).children(":selected").attr("id"), ['#a', '#b'], '#c');
+    });

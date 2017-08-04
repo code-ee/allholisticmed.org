@@ -1,0 +1,22 @@
+nav.jadeGardenNav#jadeGardenNav
+    .hidden-xs
+        ul.nav.nav-pills
+            li#b1.active
+                a(href='javascript:getContent("prescriptions", "services/jadeGarden/", "jadeGarden");') Prescriptions
+            li#b2
+                a(href='javascript:getContent("overTheCounter", "services/jadeGarden/", "jadeGarden");') Over the Counter
+    .form-group.visible-xs
+        select#studentProgSelect.form-control(onchange='javascript:getContentFromDropdown(this.value);')
+            option#c1(value='prescriptions,services/jadeGarden/,jadeGarden') Prescriptions
+            option#c2(value='overTheCounter,services/jadeGarden/,jadeGarden') Over the Counter
+
+script.
+    $('.jadeGardenNav li a').click(function() {
+        removeActive('#jadeGardenNav');
+        selectNav($(this).parent().attr('id'), ['#b'], '#c');
+    });
+
+    $('#studentProgSelect').change(function() {
+        removeActive('#jadeGardenNav');
+        selectNav($(this).children(":selected").attr("id"), ['#b'], '#c');
+    });

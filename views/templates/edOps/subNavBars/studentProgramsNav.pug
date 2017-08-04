@@ -1,0 +1,25 @@
+nav.studentProgNav#studentProgNav
+    .hidden-xs
+        ul.nav.nav-pills
+            li#b1.active
+                a(href='javascript:getContent("holisticCert", "edOps/studentPrograms/", "studentPrograms");') Holistic Health Certificate
+            li#b2
+                a(href='javascript:getContent("internships", "edOps/studentPrograms/", "studentPrograms");') Internships
+            li#b3
+                a(href='javascript:getContent("medAppr", "edOps/studentPrograms/", "studentPrograms");') Medical Apprenticeship
+    .form-group.visible-xs
+        select#studentProgSelect.form-control(onchange='javascript:getContentFromDropdown(this.value);')
+            option#c1(value='holisticCert,edOps/studentPrograms/,studentPrograms') Holistic Health Certificate
+            option#c2(value='internships,edOps/studentPrograms/,studentPrograms') Internships
+            option#c3(value='medAppr,edOps/studentPrograms/,studentPrograms') Medical Apprenticeship
+
+script.
+    $('.studentProgNav li a').click(function() {
+        removeActive('#studentProgNav');
+        selectNav($(this).parent().attr('id'), ['#b'], '#c');
+    });
+
+    $('#studentProgSelect').change(function() {
+        removeActive('#studentProgNav');
+        selectNav($(this).children(":selected").attr("id"), ['#b'], '#c');
+    });

@@ -1,0 +1,22 @@
+nav.staffInternsNav#staffInternsNav
+    .hidden-xs
+        ul.nav.nav-pills
+            li#b1.active
+                a(href='javascript:getContent("clinicStaff", "aboutUs/staffInterns/", "staffInterns");') Clinic Staff
+            li#b2
+                a(href='javascript:getContent("pastInterns", "aboutUs/staffInterns/", "staffInterns");') Past Interns
+    .form-group.visible-xs
+        select#staffInternsSelect.form-control(onchange='javascript:getContentFromDropdown(this.value);')
+            option#c1(value='clinicStaff,aboutUs/staffInterns/,staffInterns') Clinic Staff
+            option#c2(value='pastInterns,aboutUs/staffInterns/,staffInterns') Past Interns
+
+script.
+    $('.staffInternsNav li a').click(function() {
+        removeActive('#staffInternsNav');
+        selectNav($(this).parent().attr('id'), ['#b'], '#c');
+    });
+
+    $('#staffInternsSelect').change(function() {
+        removeActive('#staffInternsNav');
+        selectNav($(this).children(":selected").attr("id"), ['#b'], '#c');
+    });

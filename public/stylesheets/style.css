@@ -1,0 +1,94 @@
+html {
+    overflow-y: scroll;
+}
+
+footer {
+    text-align: center;
+}
+
+#indexContent {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.faqLink {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.mainContentWrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profilePic {
+    margin: 20px;
+}
+
+.horizontal-align {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+figure {
+    display: inline-block;
+    float: right;
+    margin: 20px;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+/*fonts*/
+h1 {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 26px;
+}
+h3 {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 15px;
+}
+p {
+    font-family: 'EB Garamond',serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+blockquote {
+    font-family: 'EB Garamond',serif;
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+pre {
+    font-family: 'EB Garamond',serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
