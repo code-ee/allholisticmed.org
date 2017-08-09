@@ -1,0 +1,28 @@
+nav.acsNav#acsNav
+    .hidden-xs
+        ul.nav.nav-pills
+            li#b1.active
+                a(href='javascript:getContent("acsHome", "acs/", "acsContent");') About ACS
+            li#b2
+                a(href='javascript:getContent("teaCulture", "acs/", "acsContent");') Tea Culture
+            li#b3
+                a(href='javascript:getContent("chineseNewYear", "acs/", "acsContent");') Chinese New Year
+            li#b4
+                a(href='javascript:getContent("moonFestival", "acs/", "acsContent");') Moon Festival
+    .form-group.visible-xs
+        select#studentProgSelect.form-control(onchange='javascript:getContentFromDropdown(this.value);')
+            option#c1(value='acsHome,acs/,acsContent') About ACS
+            option#c2(value='teaCulture,acs/,acsContent') Tea Culture
+            option#c3(value='chineseNewYear,acs/,acsContent') Chinese New Year
+            option#c4(value='moonFestival,acs/,acsContent') Moon Festival
+
+script.
+    $('.studentProgNav li a').click(function() {
+        removeActive('#acsNav');
+        selectNav($(this).parent().attr('id'), ['#b'], '#c');
+    });
+
+    $('#studentProgSelect').change(function() {
+        removeActive('#acsNav');
+        selectNav($(this).children(":selected").attr("id"), ['#b'], '#c');
+    });
