@@ -29,7 +29,7 @@ script.
     function getContent(content, path, location) {
         $.ajax({
             type: 'get',
-            url: 'https://allholisticmed.org/REST/getHTML',
+            url: 'http://localhost:4000/REST/getHTML',
             dataType: 'json',
             data: {
                 'file': content,
