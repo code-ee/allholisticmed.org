@@ -1,12 +1,12 @@
 nav.classesNav#classesNav
     .hidden-xs
         ul.nav.nav-pills
-            li#b1.active
-                a(href='javascript:getContent("taiChi", "services/classes/", "classes");') Tai Chi
-            li#b2
-                a(href='javascript:getContent("qiGong", "services/classes/", "classes");') Qi Gong
-            li#b3
-                a(href='javascript:getContent("eatingHealthy", "services/classes/", "classes");') Chinese Way of Eating Healthy
+            li
+                a#b1.active(href='javascript:getContent("taiChi", "services/classes/", "classes");') Tai Chi
+            li
+                a#b2(href='javascript:getContent("qiGong", "services/classes/", "classes");') Qi Gong
+            li
+                a#b3(href='javascript:getContent("eatingHealthy", "services/classes/", "classes");') Chinese Way of Eating Healthy
     .form-group.visible-xs
         select#classesSelect.form-control(onchange='javascript:getContentFromDropdown(this.value);')
             option#c1(value='taiChi,services/classes/,classes') Tai Chi
@@ -16,7 +16,7 @@ nav.classesNav#classesNav
 script.
     $('.classesNav li a').click(function() {
         removeActive('#classesNav');
-        selectNav($(this).parent().attr('id'), ['#b'], '#c');
+        selectNav($(this).attr('id'), ['#b'], '#c');
     });
 
     $('#classesSelect').change(function() {

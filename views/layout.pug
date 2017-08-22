@@ -11,9 +11,10 @@ html
         // local styling
         link(rel='stylesheet', href='/stylesheets/style.css')
         // fonts
-        link(href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet")
     body
         .container.mainContentWrapper
+            include templates/layout/logoHeader
             include templates/layout/carousel
             include templates/layout/navBar
             div
@@ -52,7 +53,7 @@ script.
     }
 
     function removeActive(id) {
-        $(id).find('ul li.active').removeClass('active');
+        $(id).find('ul li a.active').removeClass('active');
     }
 
     function selectNav(id, idPrefixList, dropdownId) {

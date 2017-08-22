@@ -1,12 +1,12 @@
 nav.studentProgNav#studentProgNav
     .hidden-xs
         ul.nav.nav-pills
-            li#b1.active
-                a(href='javascript:getContent("holisticCert", "edOps/studentPrograms/", "studentPrograms");') Holistic Health Certificate
-            li#b2
-                a(href='javascript:getContent("internships", "edOps/studentPrograms/", "studentPrograms");') Internships
-            li#b3
-                a(href='javascript:getContent("medAppr", "edOps/studentPrograms/", "studentPrograms");') Medical Apprenticeship
+            li
+                a#b1.active(href='javascript:getContent("holisticCert", "edOps/studentPrograms/", "studentPrograms");') Holistic Health Certificate
+            li
+                a#b2(href='javascript:getContent("internships", "edOps/studentPrograms/", "studentPrograms");') Internships
+            li
+                a#b3(href='javascript:getContent("medAppr", "edOps/studentPrograms/", "studentPrograms");') Medical Apprenticeship
     .form-group.visible-xs
         select#studentProgSelect.form-control(onchange='javascript:getContentFromDropdown(this.value);')
             option#c1(value='holisticCert,edOps/studentPrograms/,studentPrograms') Holistic Health Certificate
@@ -16,7 +16,7 @@ nav.studentProgNav#studentProgNav
 script.
     $('.studentProgNav li a').click(function() {
         removeActive('#studentProgNav');
-        selectNav($(this).parent().attr('id'), ['#b'], '#c');
+        selectNav($(this).attr('id'), ['#b'], '#c');
     });
 
     $('#studentProgSelect').change(function() {
