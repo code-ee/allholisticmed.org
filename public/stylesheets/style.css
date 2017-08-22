@@ -33,6 +33,12 @@ img {
 
 a {
     color: #00B7FF;
+    font-size: 22px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .faqLink {
