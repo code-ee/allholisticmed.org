@@ -14,7 +14,9 @@ footer {
 }
 
 img {
-    opacity: 0.85;
+    opacity: 0.9;
+    position:relative;
+    max-width: 100%;
 }
 
 .carousel-inner > .item > img {
@@ -62,6 +64,7 @@ a {
 .logoHeader {
     background-color: #00a86b;
     border-radius:5px;
+    border: solid #12613b 1px;
 }
 
 .headerText {
