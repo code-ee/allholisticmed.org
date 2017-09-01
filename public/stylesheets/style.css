@@ -4,6 +4,11 @@ html {
     overflow-y: scroll;
 }
 
+.mainContentWrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
@@ -11,12 +16,19 @@ body {
 
 footer {
     text-align: center;
+    font-size: 14px;
 }
 
 img {
     opacity: 0.9;
+    border-radius:5px;
     position:relative;
     max-width: 100%;
+    min-width: 25px;
+}
+
+.modalityImg {
+    max-width: 75%;
 }
 
 .carousel-inner > .item > img {
@@ -69,10 +81,6 @@ a {
 
 .headerText {
     color: #ecf0f1;
-}
-
-img {
-    border-radius:5px;
 }
 
 .vignette {
