@@ -27,6 +27,11 @@ img {
     min-width: 25px;
 }
 
+.spaceOut {
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+}
+
 .modalityImg {
     max-width: 75%;
 }
