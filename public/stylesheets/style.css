@@ -3,13 +3,6 @@ html {
     overflow-y: scroll;
 }
 
-.navbar-nav>li {
-    /*width: 100% !important;*/
-    text-align: center !important;
-    float: none !important;
-    display: inline-block !important;
-}
-
 .mainContentWrapper {
     max-width: 1080px;
     margin: 0 auto;
