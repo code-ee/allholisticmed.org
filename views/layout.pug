@@ -15,10 +15,11 @@ html
         link(href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet")
     body
         .container.mainContentWrapper
-            include templates/layout/logoHeader
-            include templates/layout/carousel
-            include templates/layout/navBar
-            div
+            .headerWrapper
+                include templates/layout/logoHeader
+                include templates/layout/carousel
+                include templates/layout/navBar
+            .pageContentWrapper
                 block content
     footer
         //button.btn.btn-default(type='button' onclick='javacript:window.location.reload();' value='reload' name='reload') reload
