@@ -1,5 +1,4 @@
 html {
-    font-family: 'Josefin Sans', sans-serif;
     overflow-y: scroll;
 }
 
@@ -9,7 +8,13 @@ html {
 }
 
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    /*font-family: 'Oswald', sans-serif;*/
+    /*font-family: 'Cormorant Garamond', serif;*/
+    /*font-family: 'EB Garamond', serif;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    /*font-family: 'Lato', sans-serif;*/
+    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     background-color: #ffffff;
     color: #000000;
