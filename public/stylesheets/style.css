@@ -59,6 +59,7 @@ img {
 a {
     color: #31402f;
     font-size: 22px;
+    outline: 0;
 }
 
 a:hover {
@@ -191,10 +192,15 @@ h1 {
     border-color: #5d8d5d !important;
 }
 .navbar .navbar-brand {
+    background-color: #5d8d5d !important;
     color: #ffffff !important;
 }
-.navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
+    background-color: #5d8d5d !important;
+    color: #ffffff !important;
+    border-radius: 5px !important;
+}
+.navbar .navbar-brand:hover {
     background-color: #a3d0b5 !important;
     color: #31402f !important;
     border-radius: 5px !important;
@@ -229,8 +235,10 @@ h1 {
     border-color: #ffffff !important;
     border-radius: 5px !important;
 }
-.navbar .navbar-toggle:hover,
 .navbar .navbar-toggle:focus {
+    background-color: #5d8d5d !important;
+}
+.navbar .navbar-toggle:hover {
     background-color: #a3d0b5 !important;
 }
 .navbar .navbar-toggle .icon-bar {
