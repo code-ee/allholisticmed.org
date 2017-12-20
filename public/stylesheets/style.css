@@ -3,7 +3,7 @@ html {
 }
 
 .mainContentWrapper {
-    max-width: 1080px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -93,6 +93,7 @@ a:hover {
 
 .jadeLogoHeader {
     border-radius:100%;
+    background-color: #FFFFFF;
 }
 
 .logoHeader {
@@ -282,6 +283,7 @@ h1 {
 /*nav pills*/
 .nav-pills>li>a {
     color: #31402f !important;
+    background-color: #DFDFDF;
 }
 
 .nav-pills>li>a.active {
